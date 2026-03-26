@@ -1,0 +1,16 @@
+# Claves privadas — NUNCA subir al repositorio
+*.key
+*_private*
+*private_key*
+
+# Configs con claves reales
+configs/clientes/
+/etc/wireguard/clientes/
+
+# Archivos de configuración reales (solo subir los .example)
+wg0.conf
+!wg0.conf.example
+
+# OS
+.DS_Store
+Thumbs.db
