@@ -1,4 +1,4 @@
-# 🔒 WireGuard VPN — Guía completa de configuración
+# WireGuard VPN — Guía completa de configuración
 
 Infraestructura VPN con WireGuard para proteger el acceso a servicios web internos.
 
@@ -24,7 +24,7 @@ Infraestructura VPN con WireGuard para proteger el acceso a servicios web intern
 
 ---
 
-## 📋 Requisitos
+## Requisitos
 
 | Componente | Requisito |
 |-----------|-----------|
@@ -35,7 +35,7 @@ Infraestructura VPN con WireGuard para proteger el acceso a servicios web intern
 
 ---
 
-## 1️⃣ Servidor VPN (Debian 12)
+## Servidor VPN (Debian 12)
 
 ### Instalación
 
@@ -63,7 +63,7 @@ PublicKey = <PUBLIC_KEY_CLIENTE>
 AllowedIPs = 10.0.0.2/32
 ```
 
-> ⚠️ Sustituye `ens6` por tu interfaz de red real (`ip route | grep default`)
+> Sustituye `ens6` por tu interfaz de red real (`ip route | grep default`)
 
 ### Activar IP forwarding
 
@@ -82,7 +82,7 @@ wg show
 
 ---
 
-## 2️⃣ Servidor Web (Ubuntu 22.04 + nginx)
+## Servidor Web (Ubuntu 22.04 + nginx)
 
 ### Instalar WireGuard
 
@@ -158,7 +158,7 @@ ufw reload
 
 ---
 
-## 3️⃣ Cliente Windows 10/11
+## Cliente Windows 10/11
 
 ### Instalación
 
@@ -188,7 +188,7 @@ PersistentKeepalive = 25
 
 ---
 
-## 4️⃣ Firewall del proveedor (IONOS / similar)
+## Firewall del proveedor (IONOS / similar)
 
 En el panel de tu proveedor debes abrir:
 
@@ -199,11 +199,11 @@ En el panel de tu proveedor debes abrir:
 | TCP | 80 | Entrada | HTTP (opcional) |
 | TCP | 443 | Entrada | HTTPS (opcional) |
 
-> ⚠️ El error más común es abrir el 51820 en **TCP** en vez de **UDP**. WireGuard **solo usa UDP**.
+> El error más común es abrir el 51820 en **TCP** en vez de **UDP**. WireGuard **solo usa UDP**.
 
 ---
 
-## 5️⃣ Script de gestión de usuarios
+## Script de gestión de usuarios
 
 El archivo `wg-manager.sh` automatiza la gestión de usuarios desde el servidor VPN.
 
@@ -271,7 +271,7 @@ wg-quick save wg0
 
 ---
 
-## 🐛 Solución de problemas
+## Solución de problemas
 
 | Síntoma | Causa probable | Solución |
 |---------|---------------|----------|
@@ -283,7 +283,7 @@ wg-quick save wg0
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 ├── README.md                  # Esta guía
@@ -300,7 +300,7 @@ wg-quick save wg0
 
 ---
 
-## ⚠️ Seguridad
+## Seguridad
 
 - **Nunca subas claves privadas al repositorio**
 - Los archivos `.conf` con claves reales deben estar en `.gitignore`
