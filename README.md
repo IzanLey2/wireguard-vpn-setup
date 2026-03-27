@@ -2,7 +2,7 @@
 
 Infraestructura VPN con WireGuard para proteger el acceso a servicios web internos.
 
-## 📐 Arquitectura
+## Arquitectura
 
 ```
 [Windows / Linux Cliente]
